@@ -1,0 +1,28 @@
+{
+  "name": "victoria_chatbot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "impulsa",
+  "license": "ISC",
+  "dependencies": {
+    "baileys": "^1.1.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.23.0",
+    "dotenv": "^10.0.0",
+    "expo-server-sdk": "^3.6.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12",
+    "request": "^2.88.2",
+    "venom-bot": "^3.0.21"
+  },
+  "devDependencies": {},
+  "description": ""
+}
