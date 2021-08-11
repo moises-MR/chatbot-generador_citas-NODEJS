@@ -8,6 +8,7 @@ const cors = require("cors");
 const { Expo } = require('expo-server-sdk')
 const moment = require("moment");
 moment.locale("es");
+const shortid = require('shortid');
 
 
 
@@ -36,7 +37,7 @@ app.listen(PORT,()=>{
 
 
 app.get("/",(req,res)=>{
-    res.send("Taller bot")
+    
 });
 
 
@@ -69,22 +70,23 @@ app.get("/user/:id",async(req,res)=>{
 });
 
 
+
+//POST DESDE FRONTEND CHAT
 app.post("/user/:id",async(req,res)=>{
 
     const chatAndUser = req.body;
   
 
     try {
-        const user = await chatBotModel.find({userFacebook:chatAndUser.userFacebook});
+        const user = await chatBotModel.find({_id:chatAndUser._id});
+        const userFacebook = user[0].userFacebook;
+        const chatsApp = await chatBotModel.updateOne({_id:chatAndUser._id},{chatComplete:chatAndUser.chatAsesor},{new:true});
 
-      
-        user.map((user)=>{
-           
-            user.chatComplete.push(chatAndUser.chatAsesor);
-            
-         });
-       
-        const chatsApp = await chatBotModel.updateOne({userFacebook:chatAndUser.userFacebook},{chatComplete:user[0]?.chatComplete},{new:true});
+
+        if(user.length > 0){
+            sendMessageText(userFacebook,chatAndUser.message) 
+        }
+
         res.json(chatsApp);
     } catch (error) {
         res.send(error);
@@ -214,16 +216,45 @@ const evaluateMessage = async  (recipientId,message) => {
         
            finalMessage = await validationMessageImpulsa(message,recipientId,existeUser)
         const crearUser = new chatBotModel({
-            primerSaludo:true,
-            chatComplete :[{fecha:hoy.format(formatoFecha),chat:{user:message,victoria:finalMessage} }],
-            userFacebook:recipientId,
-            diaAsesor : hoy.format(formatoFecha),
-            hablarAsesor:false,
-            interesWeb:false,
-            masInformacion: false,
-            interesPaquetes : false,
-            interesCrecerNegocio : false,
-            dia : null
+          primerSaludo: true,
+          chatComplete: [
+
+            {
+                _id: shortid.generate(),
+                text: message,
+                createdAt: new Date(),
+                user: {
+                  _id: 1,
+                  name: recipientId,
+                  avatar: 'https://placeimg.com/140/140/any',
+                },
+            },
+            {
+                _id: shortid.generate(),
+                text: finalMessage,
+                createdAt: new Date(),
+                user: {
+                  _id: 2,
+                  name: 'Victoria',
+                  avatar: 'https://placeimg.com/140/140/any',
+                },
+              },
+
+
+
+            // {
+            //   fecha: hoy.format(formatoFecha),
+            //   chat: { user: message, victoria: finalMessage },
+            // },
+          ],
+          userFacebook: recipientId,
+          diaAsesor: hoy.format(formatoFecha),
+          hablarAsesor: false,
+          interesWeb: false,
+          masInformacion: false,
+          interesPaquetes: false,
+          interesCrecerNegocio: false,
+          dia: null,
         });
         await crearUser.save();
 
@@ -238,11 +269,34 @@ const evaluateMessage = async  (recipientId,message) => {
         finalMessage = await validationMessageImpulsa(message,recipientId,existeUser);
 
         //Añadiendo conversaciones al chat
-        const newChat = {fecha:hoy.format(formatoFecha),chat:{user:message,victoria:finalMessage} };
+        
+        const newChatUser = {
+            _id: shortid.generate(),
+            text: message,
+            createdAt: new Date(),
+            user: {
+              _id: 1,
+              name: recipientId,
+              avatar: 'https://placeimg.com/140/140/any',
+            },
+        }
+
+        const newChatVictoria = {
+            _id: shortid.generate(),
+            text: finalMessage,
+            createdAt: new Date(),
+            user: {
+              _id: 2,
+              name: 'Victoria',
+              avatar: 'https://placeimg.com/140/140/any',
+            },
+          }
 
         existeUser.map((user)=>{
             if(user.userFacebook === recipientId){
-                user.chatComplete.push(newChat)
+                
+                user.chatComplete.push(newChatUser);
+                user.chatComplete.push(newChatVictoria);
             }
          });
 
@@ -277,7 +331,7 @@ const callSendApi = (messageData) => {
             console.log("No fue posible enviar en mensaje");
 
         }else{
-            // console.log(response)
+        
             console.log("El mensaje fue enviado");
         }
     })
