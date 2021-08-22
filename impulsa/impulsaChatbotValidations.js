@@ -1,7 +1,6 @@
 const chatBotModel = require("../models/ChatBotFace");
 const AnswersModel = require("../models/AnswersModel");
 const userModel = require("../models/userModel");
-const venom = require('venom-bot');
 require("dotenv").config({path:"variables.env"});
 const moment = require("moment");
 moment.locale("es")
@@ -26,120 +25,7 @@ module.exports =  validationMessageImpulsa  = async  (message,idClientFacebook,e
     }
    
 
-    const messageWhats = {
-        id: `false_521${process.env.NUMERO_ENVIO}@c.us_3AAAEE9E1C83F7561445`,
-        body: 'Hola',
-        type: 'chat',
-        t: 1628117450,
-        notifyName: '',
-        from: `521${process.env.NUMERO_ENVIO}@c.us`,
-        to: `521${process.env.NUMERO_SALIENTE}@c.us`,
-        self: 'in',
-        ack: 0,
-        invis: false,
-        isNewMsg: true,
-        star: false,
-        recvFresh: true,
-        isFromTemplate: false,
-        broadcast: false,
-        mentionedJidList: [],
-        isVcardOverMmsDocument: false,
-        isForwarded: false,
-        labels: [],
-        productHeaderImageRejected: false,
-        isDynamicReplyButtonsMsg: false,
-        isMdHistoryMsg: false,
-        chatId: `521${process.env.NUMERO_ENVIO}@c.us`,
-        fromMe: false,
-        sender: {
-          id: `521${process.env.NUMERO_ENVIO}@c.us`,
-          pushname: 'Impulsa',
-          type: 'in',
-          verifiedName: 'Impulsa',
-          isBusiness: true,
-          isEnterprise: false,
-          verifiedLevel: 0,
-          statusMute: false,
-          labels: [],
-          isMe: false,
-          isMyContact: false,
-          isPSA: false,
-          isUser: true,
-          isWAContact: true,
-          profilePicThumbObj: { eurl: null, id: `521${process.env.NUMERO_ENVIO}@c.us`, tag: null },
-          msgs: null
-        },
-        timestamp: 1628117450,
-        content: 'Hola',
-        isGroupMsg: false,
-        isMedia: false,
-        isNotification: false,
-        isPSA: false,
-        chat: {
-          id: `521${process.env.NUMERO_ENVIO}@c.us`,
-          pendingMsgs: false,
-          lastReceivedKey: {
-            fromMe: true,
-            remote: `521${process.env.NUMERO_ENVIO}@c.us`,
-            id: 'HD3MOSL3YJWXHJEQIBL0',
-            _serialized: `true_521${process.env.NUMERO_ENVIO}_HD3MOSL3YJWXHJEQIBL0`
-          },
-          t: 1628116862,
-          unreadCount: 0,
-          archive: false,
-          isReadOnly: false,
-          modifyTag: 637495,
-          muteExpiration: 0,
-          notSpam: true,
-          pin: 0,
-          ephemeralDuration: 0,
-          ephemeralSettingTimestamp: 0,
-          msgs: null,
-          kind: 'chat',
-          isGroup: false,
-          contact: {
-            id: '5213330172717@c.us',
-            pushname: 'Impulsa',
-            type: 'in',
-            verifiedName: 'Impulsa',
-            isBusiness: true,
-            isEnterprise: false,
-            verifiedLevel: 0,
-            statusMute: false,
-            labels: [],
-            formattedName: '+52 1 33 3017 2717',
-            isMe: false,
-            isMyContact: false,
-            isPSA: false,
-            isUser: true,
-            isWAContact: true,
-            profilePicThumbObj: [Object],
-            msgs: null
-          },
-          groupMetadata: null,
-          presence: { id: '5213330172717@c.us', chatstates: [] },
-          isOnline: true,
-          lastSeen: null
-        },
-        isOnline: true,
-        lastSeen: null,
-        quotedMsgObj: null,
-        mediaData: {}
-      }
-     
-   
-// Funcion para enviar un mensaje
-const enviarSms = async (client,message) => {
-    try {
-      await client.sendText(message.from, 'Tienes un CLIENTE que esta interesado en tus servicios ATIENDELO ALA BREVEDAD !!')
-        
-    } catch (error) {
-   console.error('Hubo un ERROR: ', error); //return object error
-        
-    }
-
-};
-
+  
 
 
 
@@ -176,11 +62,7 @@ const enviarSms = async (client,message) => {
             //Hacemos validaciones de las opciones que se le dieron primero validando si quiere hablar con asesor
             if(isCotaint(message,answersClient[0]?.answersSend.answersArrays.opcionAsesor.arrayOptions)){
                 //Ya existe el primer saludo del dia
-            venom.create()
-            .then((client) => {enviarSms(client,messageWhats)})
-            .catch((erro) => {
-                console.log(erro);
-            });
+         
                 //Si quiere hablar con un asesor
                 await chatBotModel.updateOne({_id:existeUser[0]?._id},{hablarAsesor:true},{new:true})
                 return  finalMessage = answersClient[0]?.answersSend.answersArrays.opcionAsesor.message;

@@ -119,3 +119,23 @@ exports.deleteAppoiment = async (req,res)=> {
    }
  
 }
+
+
+exports.createAppoiment = async (req,res) => {
+
+
+    try {
+        
+    const newAppoiment = new CitasModel(req.body);
+   const response = await newAppoiment.save()
+   if(response){
+    res.sendStatus(200)
+
+   }else{
+    res.sendStatus(400)
+   }
+    } catch (error) {
+        console.log(error)
+    }
+
+}

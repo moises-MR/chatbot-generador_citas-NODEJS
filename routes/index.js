@@ -33,6 +33,7 @@ module.exports = () => {
     router.put("/userPassword/:id",userController.upDateUserPassword);
     router.post("/answares",answaresController.answaresCreate);
     router.post("/newcita/:id",citasCotroller.daysAndHours);
+    router.post("/create-appoiment",citasCotroller.createAppoiment);
     router.put("/chatbot/:id",userController.chatUpdate);
     router.post("/image-profile",
     upload.single("imgProfile"),
