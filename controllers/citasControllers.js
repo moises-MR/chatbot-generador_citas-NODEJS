@@ -123,7 +123,6 @@ exports.deleteAppoiment = async (req,res)=> {
 
 exports.createAppoiment = async (req,res) => {
 
-
     try {
         
     const newAppoiment = new CitasModel(req.body);

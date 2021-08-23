@@ -17,25 +17,56 @@ module.exports = () => {
     router.get("/chats/:id",
     authJWT,
     chatsController.getChat);
-    router.get("/chat/:id",chatsController.getOneChat);
-    router.post("/chat/:id",chatsController.sendAndUpdateMsssage);
-    router.post("/citas",citasCotroller.postCitas);
-    router.get("/citas/:id",citasCotroller.getCitas);
-    router.get("/citasOnly/:id",citasCotroller.getOnlyAppoiment);
-    router.put("/citasOnly/:id",citasCotroller.putCita);
-    router.post("/citasOnly/:id",citasCotroller.postCompleteCita);
-    router.delete("/citasOnly/:id",citasCotroller.deleteAppoiment);
+    router.get("/chat/:id",
+    authJWT,
+    chatsController.getOneChat);
+    router.post("/chat/:id",
+    authJWT,
+    chatsController.sendAndUpdateMsssage);
+    router.post("/citas",
+    authJWT,
+    citasCotroller.postCitas);
+    router.get("/citas/:id",
+    authJWT,
+    citasCotroller.getCitas);
+    router.get("/citasOnly/:id",
+    authJWT,
+    citasCotroller.getOnlyAppoiment);
+    router.put("/citasOnly/:id",
+    authJWT,
+    citasCotroller.putCita);
+    router.post("/citasOnly/:id",
+    authJWT,
+    citasCotroller.postCompleteCita);
+    router.delete("/citasOnly/:id",
+    authJWT,
+    citasCotroller.deleteAppoiment);
     router.post("/create-user",userController.createUser);
     router.post("/login",userController.login);
-    router.get("/user/:id",userController.getUser);
-    router.put("/userName/:id",userController.upDateUserName);
-    router.put("/userEmail/:id",userController.upDateUserEmail);
-    router.put("/userPassword/:id",userController.upDateUserPassword);
+    router.get("/user/:id",
+    authJWT,
+    userController.getUser);
+    router.put("/userName/:id",
+    authJWT,
+    userController.upDateUserName);
+    router.put("/userEmail/:id",
+    authJWT,
+    userController.upDateUserEmail);
+    router.put("/userPassword/:id",
+    authJWT,
+    userController.upDateUserPassword);
     router.post("/answares",answaresController.answaresCreate);
-    router.post("/newcita/:id",citasCotroller.daysAndHours);
-    router.post("/create-appoiment",citasCotroller.createAppoiment);
-    router.put("/chatbot/:id",userController.chatUpdate);
+    router.post("/newcita/:id",
+    authJWT,
+    citasCotroller.daysAndHours);
+    router.post("/create-appoiment",
+    authJWT,
+    citasCotroller.createAppoiment);
+    router.put("/chatbot/:id",
+    authJWT,
+    userController.chatUpdate);
     router.post("/image-profile",
+    authJWT,
     upload.single("imgProfile"),
     userController.imageProfileUpLoad)
     router.get("/admin/settings/image",settingController.imageBannerGet)
