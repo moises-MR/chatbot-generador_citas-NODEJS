@@ -56,9 +56,11 @@ module.exports = () => {
     authJWT,
     userController.upDateUserPassword);
     router.post("/answares",answaresController.answaresCreate);
+    //Falta JWT por error en front
     router.post("/newcita/:id",
-    authJWT,
+
     citasCotroller.daysAndHours);
+    
     router.post("/create-appoiment",
     authJWT,
     citasCotroller.createAppoiment);

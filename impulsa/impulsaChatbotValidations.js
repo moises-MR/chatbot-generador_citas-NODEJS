@@ -206,12 +206,7 @@ module.exports =  validationMessageImpulsa  = async  (message,idClientFacebook,e
                 if( realizaCitas.realizaCitas && isCotaint(message,answersClient[0]?.answersSend.answersArrays.interesCita.arrayOptions) ){
 
            
-                    // console.log(dia1.format("dddd"));
-                    // console.log(dia2.format("dddd"));
-                    // console.log(realizaCitas.daysAndHours);
-                    if(realizaCitas.daysAndHours.lunes){
-
-                    }
+                  
 
                     
 
