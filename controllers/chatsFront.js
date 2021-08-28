@@ -34,14 +34,14 @@ exports.getOneChat = async (req,res) => {
 exports.sendAndUpdateMsssage = async  (req,res) => {
 
     const chatAndUser = req.body;
-  
+
         
     try {
         const chats = await chatBotModel.find({_id:chatAndUser._id});
-        const userFacebook = chats[0].userFacebook;
-        const chatsApp = await chatBotModel.updateOne({_id:chatAndUser._id},{chatComplete:chatAndUser.chatAsesor},{new:true});
+        const userFacebook = chats[0].userFacebook; 
+        const chatsApp = await chatBotModel.updateOne({_id:chatAndUser._id},{chatComplete:chatAndUser.chatAsesor,hablarAsesor:true},{new:true});
         const user = await userModel.find({idFacebook:chats[0]?.userId})
-     
+        console.log(chatAndUser._id)
         if(chats.length > 0){
             sendMessageText(userFacebook,chatAndUser.message,user[0]?.idFacebook) 
         }

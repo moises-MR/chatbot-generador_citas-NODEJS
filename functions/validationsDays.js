@@ -25,45 +25,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
    
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
     }
 
-    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia2.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia2.format("dddd DD MMMM"))
         }
@@ -74,13 +74,13 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
     //2
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
     }
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
@@ -88,33 +88,33 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
  
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
 
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
     }
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
     }
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
     }
 
-    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia3.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia3.format("dddd DD MMMM"))
         }
@@ -125,44 +125,44 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
         //3
 
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
         }
     
-        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia4.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia4.format("dddd DD MMMM"))
             }
@@ -171,45 +171,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
         //
 
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
-        console.log(daysAndHours[0]?.daysAndHours.viernesDay.name)
+        console.log(daysAndHours[0]?.daysAndHours?.viernesDay?.name)
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             console.log("aqi")
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
         }
     
-        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia5.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia5.format("dddd DD MMMM"))
             }
@@ -219,44 +219,44 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
 
         //4
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
         }
     
-        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia6.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia6.format("dddd DD MMMM"))
             }
@@ -266,44 +266,44 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
         //
 
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
         }
     
-        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia7.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia7.format("dddd DD MMMM"))
             }
@@ -312,45 +312,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
 
         //
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
             
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
         }
     
-        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia8.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia8.format("dddd DD MMMM"))
             }
@@ -360,45 +360,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
         // 
 
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
             
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
         }
     
-        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia9.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia9.format("dddd DD MMMM"))
             }
@@ -408,45 +408,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
         //
 
 
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
             
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
             if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
         }
     
-        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+        if(dia10.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
             if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
                 arrayDays.push(dia10.format("dddd DD MMMM"))
             }
@@ -455,45 +455,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
         //
 
 
-         if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+         if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
     }
 
-    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia11.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia11.format("dddd DD MMMM"))
         }
@@ -503,45 +503,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
     //////
 
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
     }
 
-    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia12.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia12.format("dddd DD MMMM"))
         }
@@ -550,45 +550,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
 
     ////
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
     }
 
-    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia13.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia13.format("dddd DD MMMM"))
         }
@@ -599,45 +599,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
     //////
 
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
     }
 
-    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia14.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia14.format("dddd DD MMMM"))
         }
@@ -647,45 +647,45 @@ module.exports =  validationsDay =  (daysAndHours) => {
     //////
 
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.lunesDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.lunesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.lunesDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.martesDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.martesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.martesDay.trabaja){
         
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.miercolesDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.miercolesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.miercolesDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.juevesDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.juevesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.juevesDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.viernesDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.viernesDay?.name ){
         if(daysAndHours[0]?.daysAndHours.viernesDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.sabadoDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.sabadoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.sabadoDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
     }
 
-    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours.domingoDay.name ){
+    if(dia15.format("dddd") === daysAndHours[0]?.daysAndHours?.domingoDay?.name ){
         if(daysAndHours[0]?.daysAndHours.domingoDay.trabaja){
             arrayDays.push(dia15.format("dddd DD MMMM"))
         }
