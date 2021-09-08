@@ -35,7 +35,7 @@ exports.receiveMessage = async event =>{
     const servicios = user[0]?.service;
     const postbackParaEvitarUndefined = event?.postback?.title || "%%%%%%";
 
-   
+  
     if(user[0]?.chatbotActive === false){
       return
     }
@@ -245,7 +245,7 @@ exports.receiveMessage = async event =>{
               if(e.fechaCreacion === hoy.format("dddd DD MMMM")){
 
                 _id = e._id
-                console.log(_id)
+                // console.log(_id)
               }
             });
             
@@ -368,7 +368,7 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
             break;
           
           case "474805742856301":
-            finalMessage = await caballerizasValidation(message,idClientFacebook,existeUser)
+            finalMessage = await caballerizasValidation(message,idClientFacebook,existeUser,recipientId)
             break;
         
           default:
