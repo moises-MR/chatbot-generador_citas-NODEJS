@@ -6,7 +6,7 @@ const moment = require("moment");
 moment.locale("es")
 
 
-
+ 
 
 
 
@@ -14,7 +14,7 @@ moment.locale("es")
 module.exports =  validationMessageImpulsa  = async  (message,idClientFacebook,existeUser) => {
 
     let finalMessage = "";
-
+    
 
 
     const answersClient = await AnswersModel.find({idClientFacebook})

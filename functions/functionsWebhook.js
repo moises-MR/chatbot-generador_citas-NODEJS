@@ -1,7 +1,6 @@
 const shortid = require('shortid');
 const moment = require("moment");
 moment.locale("es");
-const validationMessageImpulsa = require("../impulsa/impulsaChatbotValidations") 
 const request = require("request");
 const chatBotModel = require("../models/ChatBotFace");
 const CitasModel = require("../models/CitasModel");
@@ -10,6 +9,11 @@ const userModel = require("../models/userModel");
 const AnswersModel = require("../models/AnswersModel");
 const validationsDay = require("../functions/validationsDays")
 const validationsHours = require("../functions/validationsHours")
+
+//Validaciones de respuestas
+const validationMessageImpulsa = require("../impulsa/impulsaChatbotValidations") 
+const caballerizasValidation = require("../impulsa/caballerizasValidation") 
+
 
 
 //variables globables en las funciones 
@@ -31,11 +35,13 @@ exports.receiveMessage = async event =>{
     const servicios = user[0]?.service;
     const postbackParaEvitarUndefined = event?.postback?.title || "%%%%%%";
 
-  
+   
     if(user[0]?.chatbotActive === false){
       return
     }
 
+
+ 
 
     const createAppoiment = {
         complete:"Pendiente",
@@ -318,14 +324,15 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
 
 
 
+ 
    
 
 
      
 
-    let existeUser = await chatBotModel.find({userFacebook:recipientId});
+    let existeUser = await chatBotModel.find({userFacebook:recipientId,userId:idClientFacebook});
 
-
+ 
 
     if(existeUser.length > 0){
      
@@ -351,7 +358,23 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
     
     if(existeUser.length === 0){
         
-           finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser)
+        // Valida que chat necesita utilizar para contestar
+
+        
+        switch (idClientFacebook) {
+
+          case "111284933760445":
+            finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser)
+            break;
+          
+          case "474805742856301":
+            finalMessage = await caballerizasValidation(message,idClientFacebook,existeUser)
+            break;
+        
+          default:
+            break;
+        }
+
         const crearUser = new chatBotModel({
 
           primerSaludo: true,
@@ -412,7 +435,21 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
 
         if(!existeUser[0].hablarAsesor){
 
-        finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser);
+          switch (idClientFacebook) {
+
+            case "111284933760445":
+              finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser)
+              break;
+            
+            case "474805742856301":
+              finalMessage = await    caballerizasValidation(message,idClientFacebook,existeUser,recipientId)
+              break;
+          
+            default:
+              break;
+          }
+
+        
 
         //Añadiendo conversaciones al chat
         
@@ -611,8 +648,9 @@ if(existeUser[0].interesCita){
     
 
 
+    if(finalMessage !== null) sendMessageText(recipientId,finalMessage,idClientFacebook);
     // sendMessageImage(recipientId,idClientFacebook)
-     sendMessageText(recipientId,finalMessage,idClientFacebook);
+
 
       
       
