@@ -300,20 +300,40 @@ exports.receiveMessage = async event =>{
     }
         
   
-    // console.log(chat)
+    
      
     
 
        return
    }
   
-    evaluateMessage(senderId,messageText,idClientFacebook);
+    evaluateMessage(senderId,messageText,idClientFacebook,event);
+
+
+
+    switch (idClientFacebook) {
+
+      case "474805742856301":
+       caballerizasValidation(event)
+        break;
+    
+      default:
+        break;
+    }
+
+
+    
+
+
+
+
+
 }
 
 
 
 
-const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
+const evaluateMessage = async  (recipientId,message,idClientFacebook,event) => {
 
     let finalMessage = "";
 
@@ -367,9 +387,9 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
             finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser)
             break;
           
-          case "474805742856301":
-            finalMessage = await caballerizasValidation(message,idClientFacebook,existeUser,recipientId)
-            break;
+          // case "474805742856301":
+          //   finalMessage = await caballerizasValidation(message,idClientFacebook,existeUser,recipientId,event)
+          //   break;
         
           default:
             break;
@@ -441,9 +461,9 @@ const evaluateMessage = async  (recipientId,message,idClientFacebook) => {
               finalMessage = await validationMessageImpulsa(message,idClientFacebook,existeUser)
               break;
             
-            case "474805742856301":
-              finalMessage = await    caballerizasValidation(message,idClientFacebook,existeUser,recipientId)
-              break;
+            // case "474805742856301":
+            //   finalMessage = await    caballerizasValidation(message,idClientFacebook,existeUser,recipientId,event)
+            //   break;
           
             default:
               break;

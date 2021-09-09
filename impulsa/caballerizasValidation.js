@@ -1,24 +1,26 @@
 const userModel = require("../models/userModel");
+const chatBotModel = require("../models/ChatBotFace");
 const request = require("request");
 
 
-module.exports =  caballerizasDesmotablesValidation = async (message,idClientFacebook,existeUser,recipientId ) => {
+module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 
 
-  
-  // console.log(recipientId)
-  // console.log(idClientFacebook)
-  // console.log(existeUser)
+  const { recipient, sender  } = event;
+
+ 
+  let existeUser = await chatBotModel.find({userFacebook:sender?.id,userId:recipient?.id});
+
 
   const  finalMessage = "Hola que tal con gusto te brindo mas informacion, Contamos con 2 medidas 3 y 4 metros                                                                                                                               Los precios por pared o panel básico son los siguientes:                                                                                                          3 mts. $6,500                                                                                                                         4 mts. $7,500                                                                                                                                                                                                                                                        *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro y galvateja ) y tiene un costo aparte.                                                                                                                                                                                                                                                       *Los precios no incluyen instalación y flete.                                                                                                                                                                                                                                                       *La pared con diseño y/o herrajes laboriosos en caso de interesarle tiene un costo de 2,500 pesos extra. Estamos ubicados en zapopan jalisco."
 
            
 
     if(existeUser.length === 0){
-      console.log("si entro")
+
         //Es primera vez que manda mensaje el usuario
-        sendMessageText(recipientId,finalMessage,idClientFacebook)
-        sendButtonMessage(recipientId,idClientFacebook)
+        sendMessageText(sender?.id,finalMessage,recipient?.id)
+        sendButtonMessage(sender?.id,recipient?.id)
           
 
     }
