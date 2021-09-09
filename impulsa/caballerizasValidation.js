@@ -88,7 +88,7 @@ const sendButtonMessage = (recipientId,idClientFacebook) => {
                       "title": "¿ Quieres ver nuestros modelos ?",
                       "buttons": [{
                         "type": "web_url",
-                        "url":"https://caballerizasdesmotables.netlify.app/#catalogo",
+                        "url":"https://www.caballerizasdesmontables.com/#catalogo",
                         "title": `VER CATALOGO`
                       },
                       {
