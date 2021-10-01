@@ -8,16 +8,19 @@ module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 
   const { recipient, sender  } = event;
 
+  console.log("evento completo " + event + "        ******** evento completo ")
+  console.log("recipient " + recipient +"           *******  recipient ")
+  console.log("sender "+sender +"     ***** sender ")
  
   let existeUser = await chatBotModel.find({userFacebook:sender?.id,userId:recipient?.id});
 
-
-  const  finalMessage = "Hola que tal con gusto te brindo mas informacion, Contamos con 2 medidas 3 y 4 metros                                                                                                                               Los precios por pared o panel básico son los siguientes:                                                                                                          3 mts. $6,500                                                                                                                         4 mts. $7,500                                                                                                                                                                                                                                                        *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro y galvateja ) y tiene un costo aparte.                                                                                                                                                                                                                                                       *Los precios no incluyen instalación y flete.                                                                                                                                                                                                                                                       *La pared con diseño y/o herrajes laboriosos en caso de interesarle tiene un costo de 2,500 pesos extra. Estamos ubicados en zapopan jalisco."
+console.log(existeUser)
+  const  finalMessage = "Hola que tal con gusto te brindo mas informacion, Contamos con 2 medidas 3 y 4 metros                                                                                                                               Los precios por pared o panel básico son los siguientes:                                                                                                          3 mts. $7,200                                                                                                                         4 mts. $8,200                                                                                                                                                                                                                                                        *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro y galvateja ) y tiene un costo aparte.                                                                                                                                                                                                                                                       *Los precios no incluyen instalación y flete.                                                                                                                                                                                                                                                       *La pared con diseño y/o herrajes laboriosos en caso de interesarle tiene un costo de 2,500 pesos extra. Estamos ubicados en zapopan jalisco."
 
            
 
     if(existeUser.length === 0){
-
+      console.log("Si entro")
         //Es primera vez que manda mensaje el usuario
         sendMessageText(sender?.id,finalMessage,recipient?.id)
         sendButtonMessage(sender?.id,recipient?.id)
@@ -37,7 +40,7 @@ module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 const callSendApi = async (messageData,idClientFacebook) => {
 
     const TOKENIDFACE = await userModel.findOne({idFacebook:idClientFacebook});
-  
+    console.log("TOKEN" + TOKENIDFACE);
 
 
     request({
