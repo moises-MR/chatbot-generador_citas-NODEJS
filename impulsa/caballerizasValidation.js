@@ -8,14 +8,34 @@ module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 
   const { recipient, sender  } = event;
 
-  console.log("evento completo " + event + "        ******** evento completo ")
-  console.log("recipient " + recipient +"           *******  recipient ")
-  console.log("sender "+sender +"     ***** sender ")
+  // console.log("evento completo " + event + "        ******** evento completo ")
+  // console.log("recipient " + recipient +"           *******  recipient ")
+  // console.log("sender "+sender +"     ***** sender ")
  
   let existeUser = await chatBotModel.find({userFacebook:sender?.id,userId:recipient?.id});
 
 console.log(existeUser)
-  const  finalMessage = "Hola que tal con gusto te brindo mas informacion, Contamos con 2 medidas 3 y 4 metros                                                                                                                               Los precios por pared o panel básico son los siguientes:                                                                                                          3 mts. $7,200                                                                                                                         4 mts. $8,200                                                                                                                                                                                                                                                        *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro y galvateja ) y tiene un costo aparte.                                                                                                                                                                                                                                                       *Los precios no incluyen instalación y flete.                                                                                                                                                                                                                                                       *La pared con diseño y/o herrajes laboriosos en caso de interesarle tiene un costo de 2,500 pesos extra. Estamos ubicados en zapopan jalisco."
+  const  finalMessage =     `Hola qué tal con gusto te brindo más informacion
+  Contamos con 2 medidas estándar 3 y 4 mtrs 
+  Los precios son por panel o pared.
+  Modelo
+  Ocotla o Cajititlán 
+  3 mtrs $6,800
+  4 mtrs  $7,800
+  Cuyutlan 
+  3 mtr   $ 6,500
+  4 mtr   $7,500
+  Tonala y tequila 
+  3 mtr   $6,200
+  4 mtr   $7,200
+  TAPALPA 
+  3 mtr    $ 8,500
+  4 mtr    $9,500
+  Paneles frontales sube $500
+  *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro, galvateja, o pvc) y tiene costo aparte 
+  *Los precios no incluyen instalación y flete.
+  Estamos ubicados en Tonalá jalisco 
+  Precios sujeto a cambio sin previo aviso`
 
            
 
@@ -28,6 +48,7 @@ console.log(existeUser)
 
     }
     
+
 
 
  
