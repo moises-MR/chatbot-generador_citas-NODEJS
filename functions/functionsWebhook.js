@@ -26,8 +26,8 @@ const arrayHours = ["hrs"];
 
 exports.receiveMessage = async event =>{
 
-    const senderId = event.sender.id;
-    const messageText = event.message?.text;
+    const senderId = event?.sender.id;
+    const messageText = event?.message?.text;
     const idClientFacebook = event.recipient.id;
     const chat = await chatBotModel.find({userFacebook:senderId});
     const user = await userModel.find({idFacebook:idClientFacebook})

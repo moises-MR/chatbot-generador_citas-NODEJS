@@ -14,7 +14,7 @@ module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
  
   let existeUser = await chatBotModel.find({userFacebook:sender?.id,userId:recipient?.id});
 
-console.log(existeUser)
+// console.log(existeUser)
   const  finalMessage =     `Hola qué tal con gusto te brindo más informacion
   Contamos con 2 medidas estándar 3 y 4 mtrs 
   Los precios son por panel o pared.
