@@ -11,10 +11,10 @@ const moment = require("moment");
 moment.locale("es");
 
 
-const httpsServerOptions = {
-    key : fs.readFileSync(process.env.KEY_PATH),
-    cert: fs.readFileSync(process.env.CERT_PATH)
-}
+// const httpsServerOptions = {
+//     key : fs.readFileSync(process.env.KEY_PATH),
+//     cert: fs.readFileSync(process.env.CERT_PATH)
+// }
 
 // Conectar mongodb
 mongoose.Promise = global.Promise;
@@ -23,13 +23,14 @@ mongoose.connect(process.env.db_URL,
 
 
 const app = express();
-const PORT_HTTP = process.env.PORT || 80
-const PORT_HTTPS = process.env.PORT || 443
-const IP = process.env.IP 
+const PORT = process.env.PORT || 9000;
+const PORT_HTTP = process.env.PORT_HTTP || 80;
+const PORT_HTTPS = process.env.PORT_HTTPS || 443;
+const IP = process.env.IP; 
 
-app.use((req,res,next) => {
-    if(req.secure) next(); else res.redirect(`https://${req.headers.host}${req.url}`)
-})
+// app.use((req,res,next) => {
+//     if(req.secure) next(); else res.redirect(`https://${req.headers.host}${req.url}`)
+// })
 
 
 app.use(cors());
@@ -46,16 +47,16 @@ app.use(express.urlencoded({extended:true}));
 app.use(router());
 
 
-const serverHttp = http.createServer(app);
-serverHttp.listen(PORT_HTTP);
+// const serverHttp = http.createServer(app);
+// serverHttp.listen(PORT_HTTP);
 
-const serverHttps = https.createServer(httpsServerOptions,app);
-serverHttps.listen(PORT_HTTPS);
+// const serverHttps = https.createServer(httpsServerOptions,app);
+// serverHttps.listen(PORT_HTTPS);
 
 
-// app.listen(PORT,()=>{
-//     console.log(`Servidor funcionando en el puerto ${PORT}`);
-// });
+app.listen(PORT,()=>{
+    console.log(`Servidor funcionando en el puerto ${PORT}`);
+});
 
 
 

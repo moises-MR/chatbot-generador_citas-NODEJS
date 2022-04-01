@@ -3,6 +3,89 @@ const chatBotModel = require("../models/ChatBotFace");
 const request = require("request");
 
 
+
+const callSendApi = async (messageData,idClientFacebook) => {
+
+  const TOKENIDFACE = await userModel.findOne({idFacebook:idClientFacebook});
+
+
+
+  request({
+      uri:"https://graph.facebook.com/v2.6/me/messages",
+      qs: {access_token : TOKENIDFACE?.tokenFacebook},
+      method:"POST",
+      json: messageData
+  },(error,response,data)=>{
+    // console.log(response);
+
+      if(error){
+          console.log("No fue posible enviar en mensaje");
+
+      }else{
+          console.log("El mensaje fue enviado");
+      }
+  })
+}
+
+
+
+
+const sendMessageText= (recipientId,message,idClientFacebook) =>{
+  let messageData = {
+      recipient:{
+          id:recipientId
+      },
+      message:{
+          text: message
+      }
+  }
+
+  callSendApi(messageData,idClientFacebook);
+}
+
+
+
+const sendButtonMessage = (recipientId,idClientFacebook) => {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "¿ Quieres ver nuestros modelos ?",
+                    "buttons": [{
+                      "type": "web_url",
+                      "url":"https://www.caballerizasdesmontables.com/#catalogo",
+                      "title": `VER CATALOGO`
+                    },
+                    {
+                      "type": "web_url",
+                      "url":"https://api.whatsapp.com/send?text=Hola me podrias dar mas informacion&phone=+523331982114",
+                      "title": `WhatssApp`
+                    }],
+                }]
+            }
+      }
+    }
+  };  
+  
+  callSendApi(messageData,idClientFacebook);
+}
+
+
+
+
+
+
+
+
+
+
+
 module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 
 
@@ -58,76 +141,6 @@ module.exports =  caballerizasDesmotablesValidation = async ( event ) => {
 
 
 
-const callSendApi = async (messageData,idClientFacebook) => {
-
-    const TOKENIDFACE = await userModel.findOne({idFacebook:idClientFacebook});
-    console.log("TOKEN" + TOKENIDFACE);
-
-
-    request({
-        uri:"https://graph.facebook.com/v2.6/me/messages",
-        qs: {access_token : TOKENIDFACE?.tokenFacebook},
-        method:"POST",
-        json: messageData
-    },(error,response,data)=>{
-        if(error){
-               
-            console.log("No fue posible enviar en mensaje");
-
-        }else{
-            console.log("El mensaje fue enviado");
-        }
-    })
-}
-
-
-
-
-const sendMessageText= (recipientId,message,idClientFacebook) =>{
-    let messageData = {
-        recipient:{
-            id:recipientId
-        },
-        message:{
-            text: message
-        }
-    }
-  
-    callSendApi(messageData,idClientFacebook);
-}
-
-
-
-const sendButtonMessage = (recipientId,idClientFacebook) => {
-    var messageData = {
-      recipient: {
-        id: recipientId
-      },
-      message: {
-        attachment: {
-          type: "template",
-          "payload": {
-                  "template_type": "generic",
-                  "elements": [{
-                      "title": "¿ Quieres ver nuestros modelos ?",
-                      "buttons": [{
-                        "type": "web_url",
-                        "url":"https://www.caballerizasdesmontables.com/#catalogo",
-                        "title": `VER CATALOGO`
-                      },
-                      {
-                        "type": "web_url",
-                        "url":"https://api.whatsapp.com/send?text=Hola me podrias dar mas informacion&phone=+523331982114",
-                        "title": `WhatssApp`
-                      }],
-                  }]
-              }
-        }
-      }
-    };  
-    
-    callSendApi(messageData,idClientFacebook);
-  }
 
 
 

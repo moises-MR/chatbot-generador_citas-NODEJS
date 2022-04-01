@@ -32,6 +32,8 @@ exports.receiveMessage = async event =>{
     const chat = await chatBotModel.find({userFacebook:senderId});
     const user = await userModel.find({idFacebook:idClientFacebook})
 
+
+      
     const servicios = user[0]?.service;
     const postbackParaEvitarUndefined = event?.postback?.title || "%%%%%%";
 
