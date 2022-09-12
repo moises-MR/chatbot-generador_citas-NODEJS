@@ -53,13 +53,18 @@ const sendButtonMessage = (recipientId, idClientFacebook) => {
               buttons: [
                 {
                   type: "web_url",
-                  url: "https://www.caballerizasdesmontables.com/#catalogo",
+                  url: "https://caballerizasdesmotables.netlify.app/",
                   title: `VER CATALOGO`,
                 },
+              ],
+            },
+            {
+              title: "¡PIDE TU COTIZACION YA!",
+              buttons: [
                 {
                   type: "web_url",
-                  url: "https://api.whatsapp.com/send?text=Hola me podrias dar mas informacion&phone=+523331982114",
-                  title: `WhatssApp`,
+                  url: "https://api.whatsapp.com/send?text=Hola me podrias dar mas informacion del anuncio de las caballerizas.&phone=+523331982114",
+                  title: `COTIZAR`,
                 },
               ],
             },
@@ -90,18 +95,24 @@ module.exports = caballerizasDesmotablesValidation = async (event) => {
   Los precios son por panel o pared.
   Modelo
   Ocotla o Cajititlán 
-  3 mtrs $7,800
-  4 mtrs  $8,800
+  3 mtrs $8,800
+  4 mtrs  $9,800
   Cuyutlan 
-  3 mtr   $7,500
-  4 mtr   $8,500
-  Tonala y tequila 
-  3 mtr   $7,200
-  4 mtr   $8,200
+  3 mtr   $8,500
+  4 mtr   $9,500
+  Tonala y Tequila 
+  3 mtr   $8,200
+  4 mtr   $9,200
   TAPALPA 
-  3 mtr    $9,500
-  4 mtr    $10,500
-  Paneles frontales sube $1000
+  3 mtr    $11,000
+  4 mtr    $12,000
+  ARANDAS 
+  3 mtr    $11,000
+  4 mtr    $12,000
+  TEPATITLAN 
+  3 mtr    $11,000
+  4 mtr    $12,000
+  Paneles frontales sube $1,000
   *El techo en caso de necesitarlo, es de lámina (galvanizada, pintro, galvateja, o pvc) y tiene costo aparte 
   *Los precios no incluyen instalación y flete.
   Estamos ubicados en Tonalá jalisco 
