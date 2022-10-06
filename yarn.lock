@@ -242,7 +242,7 @@ axios@^0.24.0:
   dependencies:
     follow-redirects "^1.14.4"
 
-baileys@^1.1.1:
+baileys@^5.0.1:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/baileys/-/baileys-5.0.5.tgz#462acb22cf184943bb6cd7a1a427e5245146d43c"
   integrity sha512-AsuHg0dEah7if9ASYIMuuM/08ZhhkGw9166Oxw79cY2dPMoUa7yzEH/efUWE1pUNh+OvLlO4TFfUbgTvIXRCdg==
