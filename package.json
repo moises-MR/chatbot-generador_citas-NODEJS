@@ -1,7 +1,10 @@
 {
   "name": "victoria_chatbot",
-  "version": "1.0.0",
+  "version": "1.0.10",
   "main": "app.js",
+    "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
     "start": "node app",
     "dev": "nodemon app.js"
